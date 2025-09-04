@@ -210,15 +210,21 @@ p, body {
 
 /* Hero Section */
 .hero {
-    /* Put the image first so it's visible; gradient sits underneath */
-    background: url('assets/hero-mountains.jpg') center bottom / cover no-repeat, linear-gradient(180deg, #f9fbfe 0%, #f3f7fb 100%);
+    /* Image first so it's visible; gradient underneath */
+    background: url('assets/hero-mountains.jpg'), linear-gradient(180deg, #f9fbfe 0%, #f3f7fb 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, auto;
+    background-position: center 75%, center;
     color: var(--primary-navy);
-    padding: 140px 0 260px;
+    padding: 140px 0 160px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 620px;
+    min-height: calc(100vh - 72px);
 }
+
+/* Ensure anchor jumps account for fixed navbar */
+section { scroll-margin-top: 90px; }
 
 /* Remove previous decorative overlays */
 .hero::before, .hero::after { display: none; }
@@ -774,7 +780,8 @@ p, body {
     }
     
     .hero {
-        padding: 100px 0 60px;
+        padding: 120px 0 140px;
+        background-position: center 80%, center;
     }
     
     .hero-title {
