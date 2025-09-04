@@ -381,7 +381,7 @@ p, body {
 }
 
 .service-card {
-    background: #fff;
+    background: var(--off-white);
     border-radius: 6px;
     padding: 16px 20px;
     border: 1px solid var(--light-slate);
@@ -404,8 +404,8 @@ p, body {
 }
 
 .service-header h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 600;
     margin: 0;
     color: var(--primary-navy);
@@ -414,9 +414,9 @@ p, body {
 
 
 .service-header p {
-    margin: 2px 0 0 0;
-    font-size: 14px;
-    line-height: 20px;
+    margin: 4px 0 0 0;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--steel-gray);
 }
 
@@ -465,8 +465,8 @@ p, body {
     padding: 8px 0;
     position: relative;
     padding-left: 16px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--primary-navy);
 }
 
@@ -483,31 +483,65 @@ p, body {
 
 .pricing-note {
     text-align: center;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: var(--steel-gray);
-    margin-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--sky-blue);
+    margin-top: 24px;
 }
 
-/* Services section heading scale to match mock */
-.services .section-title {
-    font-size: 22px;
-    line-height: 30px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
 
 /* Journey Section */
 .journey {
     padding: 80px 0;
     background: white;
+    position: relative;
+}
+
+.journey::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(77, 184, 255, 0.05) 50%, transparent 100%);
+    z-index: 1;
 }
 
 .journey-stages {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Growth wedge visual motif */
+.journey-stages::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--sky-blue) 0%, var(--growth-green) 50%, var(--sky-blue) 100%);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.journey-stages::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid var(--sky-blue);
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .stage {
@@ -518,6 +552,7 @@ p, body {
     border: 1px solid var(--light-slate);
     transition: all 0.2s ease;
     position: relative;
+    z-index: 3;
 }
 
 .stage:hover {
