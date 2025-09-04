@@ -611,9 +611,7 @@ section { scroll-margin-top: 90px; }
 }
 
 /* Slight upward focus to avoid cropping top of head */
-.member-photo img.photo-top {
-    object-position: 50% 25%;
-}
+/* Default is centered crop; no per-person overrides needed now */
 
 .photo-placeholder {
     width: 120px;
