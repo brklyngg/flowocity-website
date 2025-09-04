@@ -15,16 +15,31 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Service Cards Expand/Collapse
+// Service Cards Expand/Collapse (Single-Open Accordion)
 document.querySelectorAll('.expand-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const targetId = btn.getAttribute('data-target');
         const details = document.getElementById(targetId);
         const icon = btn.querySelector('i');
+        const isCurrentlyActive = details.classList.contains('active');
         
-        details.classList.toggle('active');
-        icon.classList.toggle('fa-chevron-down');
-        icon.classList.toggle('fa-chevron-up');
+        // Close all other accordion items
+        document.querySelectorAll('.service-details').forEach(detail => {
+            if (detail.id !== targetId) {
+                detail.classList.remove('active');
+                const otherIcon = detail.closest('.service-card').querySelector('.expand-btn i');
+                otherIcon.style.transform = 'rotate(0deg)';
+            }
+        });
+        
+        // Toggle current item
+        if (isCurrentlyActive) {
+            details.classList.remove('active');
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            details.classList.add('active');
+            icon.style.transform = 'rotate(180deg)';
+        }
     });
 });
 
