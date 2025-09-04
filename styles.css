@@ -105,14 +105,22 @@ p, body {
 .logo-enso {
     width: 40px;
     height: 40px;
-    border: 3px solid var(--sky-blue);
-    border-radius: 50%;
     position: relative;
-    border-top-color: transparent;
-    border-right-color: transparent;
 }
 
-.logo-enso::before,
+.logo-enso::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--sky-blue);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    top: 0;
+    left: 0;
+}
+
 .logo-enso::after {
     content: '';
     position: absolute;
@@ -121,15 +129,8 @@ p, body {
     height: 12px;
     top: 50%;
     left: 50%;
-    transform-origin: center;
-}
-
-.logo-enso::before {
     transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.logo-enso::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform-origin: center;
 }
 
 .nav-logo h2 {
@@ -193,36 +194,82 @@ p, body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--off-white) 0%, var(--light-slate) 100%);
+    background: var(--off-white);
     color: var(--primary-navy);
     padding: 120px 0 80px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 600px;
 }
 
 .hero::before {
     content: '';
     position: absolute;
+    bottom: 0;
     left: 0;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    background-image: radial-gradient(circle, var(--light-slate) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.4;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, transparent 0%, rgba(77, 184, 255, 0.1) 100%);
+    z-index: 1;
 }
 
 .hero::after {
     content: '';
     position: absolute;
+    bottom: 0;
+    left: 0;
     right: 0;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    background-image: radial-gradient(circle, var(--light-slate) 1px, transparent 1px);
-    background-size: 20px 20px;
-    opacity: 0.4;
+    height: 200px;
+    background-image: 
+        linear-gradient(45deg, transparent 30%, rgba(77, 184, 255, 0.1) 30%, rgba(77, 184, 255, 0.1) 70%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(122, 128, 137, 0.1) 30%, rgba(122, 128, 137, 0.1) 70%, transparent 70%);
+    background-size: 100px 100px, 80px 80px;
+    background-position: 0 0, 50px 50px;
+    z-index: 2;
+}
+
+.hero-logo {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-logo .logo-enso {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px;
+}
+
+.hero-logo .logo-enso::before {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+}
+
+.hero-logo .logo-enso::after {
+    width: 3px;
+    height: 18px;
+}
+
+.hero-logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--black);
+    font-family: 'Montserrat', 'Proxima Nova', 'Gotham', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: -0.5px;
+}
+
+.hero-tagline {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+    color: var(--steel-gray);
+    font-style: italic;
+    font-weight: 400;
+    position: relative;
+    z-index: 3;
 }
 
 .hero-title {
@@ -231,6 +278,8 @@ p, body {
     font-weight: 700;
     margin-bottom: 24px;
     color: var(--primary-navy);
+    position: relative;
+    z-index: 3;
 }
 
 .hero-subtitle {
@@ -242,6 +291,8 @@ p, body {
     margin-right: auto;
     color: var(--steel-gray);
     font-weight: 400;
+    position: relative;
+    z-index: 3;
 }
 
 .hero-buttons {
@@ -249,6 +300,8 @@ p, body {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
 }
 
 /* Buttons */
@@ -307,24 +360,45 @@ p, body {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-card {
     background: white;
-    border-radius: 8px;
+    border-radius: 0;
     padding: 32px;
     border: 1px solid var(--light-slate);
     transition: all 0.2s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.service-card:first-child {
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(135deg, #4DB8FF 0%, #35C4FF 100%);
+    color: white;
+}
+
+.service-card:nth-child(2) {
+    background: linear-gradient(135deg, #62A896 0%, #4DB8FF 100%);
+    color: white;
+}
+
+.service-card:last-child {
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #62A896 100%);
+    color: white;
 }
 
 .service-card:hover {
-    border-color: var(--sky-blue);
-    box-shadow: 0 4px 12px rgba(77, 184, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-header {
@@ -338,21 +412,31 @@ p, body {
     font-size: 28px;
     line-height: 36px;
     font-weight: 600;
-    color: var(--primary-navy);
     margin-bottom: 8px;
 }
 
+.service-card:first-child .service-header h3,
+.service-card:nth-child(2) .service-header h3,
+.service-card:last-child .service-header h3 {
+    color: white;
+}
+
 .service-header p {
-    color: var(--steel-gray);
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 24px;
 }
 
+.service-card:first-child .service-header p,
+.service-card:nth-child(2) .service-header p,
+.service-card:last-child .service-header p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .expand-btn {
     background: none;
     border: none;
-    color: var(--sky-blue);
+    color: white;
     cursor: pointer;
     padding: 8px;
     border-radius: 50%;
@@ -364,8 +448,14 @@ p, body {
     justify-content: center;
 }
 
+.service-card:first-child .expand-btn,
+.service-card:nth-child(2) .expand-btn,
+.service-card:last-child .expand-btn {
+    color: white;
+}
+
 .expand-btn:hover {
-    background: var(--light-slate);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .expand-btn i {
@@ -390,16 +480,21 @@ p, body {
 
 .service-details li {
     padding: 8px 0;
-    color: var(--steel-gray);
     position: relative;
     padding-left: 20px;
     font-size: 16px;
     line-height: 24px;
 }
 
+.service-card:first-child .service-details li,
+.service-card:nth-child(2) .service-details li,
+.service-card:last-child .service-details li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .service-details li::before {
     content: "•";
-    color: var(--sky-blue);
+    color: white;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -579,6 +674,23 @@ p, body {
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+.contact-email {
+    text-align: center;
+    margin-top: 24px;
+    color: var(--steel-gray);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.contact-email a {
+    color: var(--sky-blue);
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
