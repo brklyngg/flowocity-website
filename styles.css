@@ -145,12 +145,17 @@ p, body {
 /* Brand logo image */
 .brand-logo {
     height: 28px;
+    width: auto;
     display: block;
+    object-fit: contain;
 }
 
 .hero .brand-logo {
     height: 42px;
+    width: auto;
     margin: 0 auto 10px;
+    display: block;
+    object-fit: contain;
 }
 
 .nav-menu {
