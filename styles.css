@@ -142,6 +142,17 @@ p, body {
     letter-spacing: -0.5px;
 }
 
+/* Brand logo image */
+.brand-logo {
+    height: 28px;
+    display: block;
+}
+
+.hero .brand-logo {
+    height: 42px;
+    margin: 0 auto 10px;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
@@ -362,101 +373,71 @@ p, body {
 .services-grid {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    margin-bottom: 3rem;
+    gap: 8px;
+    margin-bottom: 24px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .service-card {
-    background: white;
-    border-radius: 0;
-    padding: 32px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 16px 20px;
     border: 1px solid var(--light-slate);
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     position: relative;
 }
 
-.service-card:first-child {
-    border-radius: 8px 8px 0 0;
-    background: linear-gradient(135deg, #4DB8FF 0%, #35C4FF 100%);
-    color: white;
-}
-
-.service-card:nth-child(2) {
-    background: linear-gradient(135deg, #62A896 0%, #4DB8FF 100%);
-    color: white;
-}
-
-.service-card:last-child {
-    border-radius: 0 0 8px 8px;
-    background: linear-gradient(135deg, var(--primary-navy) 0%, #62A896 100%);
-    color: white;
-}
-
 .service-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: rgba(77, 184, 255, 0.6);
+    box-shadow: 0 4px 12px rgba(77, 184, 255, 0.08);
 }
+
+.service-card:hover { transform: translateY(-1px); }
 
 .service-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 12px;
 }
 
 .service-header h3 {
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.service-card:first-child .service-header h3,
-.service-card:nth-child(2) .service-header h3,
-.service-card:last-child .service-header h3 {
-    color: white;
-}
-
-.service-header p {
-    margin-bottom: 16px;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--primary-navy);
 }
 
-.service-card:first-child .service-header p,
-.service-card:nth-child(2) .service-header p,
-.service-card:last-child .service-header p {
-    color: rgba(255, 255, 255, 0.9);
+
+
+.service-header p {
+    margin: 2px 0 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--steel-gray);
 }
+
+
 
 .expand-btn {
     background: none;
     border: none;
-    color: white;
+    color: var(--steel-gray);
     cursor: pointer;
-    padding: 8px;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    width: 32px;
-    height: 32px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.service-card:first-child .expand-btn,
-.service-card:nth-child(2) .expand-btn,
-.service-card:last-child .expand-btn {
-    color: white;
-}
-
-.expand-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
+.expand-btn:hover { background: var(--off-white); }
 
 .expand-btn i {
     transition: transform 0.2s ease;
@@ -466,6 +447,8 @@ p, body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease;
+    border-top: 1px solid var(--light-slate);
+    margin-top: 12px;
 }
 
 .service-details.active {
@@ -475,39 +458,44 @@ p, body {
 .service-details ul {
     list-style: none;
     padding-left: 0;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .service-details li {
     padding: 8px 0;
     position: relative;
-    padding-left: 20px;
-    font-size: 16px;
-    line-height: 24px;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--primary-navy);
 }
 
-.service-card:first-child .service-details li,
-.service-card:nth-child(2) .service-details li,
-.service-card:last-child .service-details li {
-    color: rgba(255, 255, 255, 0.9);
-}
+
 
 .service-details li::before {
     content: "•";
-    color: white;
+    color: var(--sky-blue);
     position: absolute;
     left: 0;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .pricing-note {
     text-align: center;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--steel-gray);
+    margin-top: 8px;
+}
+
+/* Services section heading scale to match mock */
+.services .section-title {
+    font-size: 22px;
+    line-height: 30px;
     font-weight: 600;
-    color: var(--sky-blue);
-    margin-top: 32px;
+    margin-bottom: 20px;
 }
 
 /* Journey Section */
