@@ -210,40 +210,17 @@ p, body {
 
 /* Hero Section */
 .hero {
-    background: var(--off-white);
+    background: linear-gradient(180deg, #f9fbfe 0%, #f3f7fb 100%), url('assets/hero-mountains.jpg') center bottom / cover no-repeat;
     color: var(--primary-navy);
-    padding: 120px 0 80px;
+    padding: 140px 0 260px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 600px;
+    min-height: 620px;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(180deg, transparent 0%, rgba(77, 184, 255, 0.1) 100%);
-    z-index: 1;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background-image: 
-        linear-gradient(45deg, transparent 30%, rgba(77, 184, 255, 0.1) 30%, rgba(77, 184, 255, 0.1) 70%, transparent 70%),
-        linear-gradient(-45deg, transparent 30%, rgba(122, 128, 137, 0.1) 30%, rgba(122, 128, 137, 0.1) 70%, transparent 70%);
-    background-size: 100px 100px, 80px 80px;
-    background-position: 0 0, 50px 50px;
-    z-index: 2;
-}
+/* Remove previous decorative overlays */
+.hero::before, .hero::after { display: none; }
 
 .hero-logo {
     margin-bottom: 40px;
@@ -301,7 +278,7 @@ p, body {
 .hero-subtitle {
     font-size: 20px;
     line-height: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -319,6 +296,8 @@ p, body {
     position: relative;
     z-index: 3;
 }
+
+/* remove decorative mountains container (no longer used) */
 
 /* Buttons */
 .btn {
