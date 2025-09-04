@@ -210,7 +210,8 @@ p, body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(180deg, #f9fbfe 0%, #f3f7fb 100%), url('assets/hero-mountains.jpg') center bottom / cover no-repeat;
+    /* Put the image first so it's visible; gradient sits underneath */
+    background: url('assets/hero-mountains.jpg') center bottom / cover no-repeat, linear-gradient(180deg, #f9fbfe 0%, #f3f7fb 100%);
     color: var(--primary-navy);
     padding: 140px 0 260px;
     text-align: center;
