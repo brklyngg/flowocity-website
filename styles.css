@@ -371,6 +371,66 @@ section { scroll-margin-top: 90px; }
     margin-right: auto;
 }
 
+/* Stack + Stage Arrow layout */
+.stack-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 160px;
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.stage-arrow {
+    position: relative;
+    display: none;
+}
+
+.stage-arrow .arrow-line {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    right: 56px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary-navy) 0%, var(--sky-blue) 100%);
+}
+
+.stage-arrow .arrow-head {
+    position: absolute;
+    right: 50px;
+    top: -2px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid var(--primary-navy);
+}
+
+.stage-arrow .arrow-labels {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+}
+
+.stage-arrow .arrow-labels .label-top,
+.stage-arrow .arrow-labels .label-mid,
+.stage-arrow .arrow-labels .label-bottom {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    color: var(--primary-navy);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.stage-arrow .arrow-labels .label-top { top: 0; transform: translateY(0); }
+.stage-arrow .arrow-labels .label-mid { top: 50%; }
+.stage-arrow .arrow-labels .label-bottom { bottom: 0; transform: translateY(0); }
+
 .service-card {
     background: var(--off-white);
     border-radius: 6px;
@@ -786,6 +846,9 @@ section { scroll-margin-top: 90px; }
         line-height: clamp(30px, 2.2vw, 40px);
         max-width: 900px;
     }
+
+    /* Show the stage arrow on desktop */
+    .stage-arrow { display: block; }
 }
 
 /* Responsive Design */
