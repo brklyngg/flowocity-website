@@ -45,6 +45,10 @@ Flowocity offers three main service tiers:
 2. **FP&A** - Forecasts you can operate against
 3. **Strategic CFO** - Decisions with board-level confidence
 
+## Forms
+
+The contact form is handled by Netlify Forms. Submissions are processed server-side by Netlify and can trigger email notifications in the Netlify dashboard. The form redirects to `success.html` after submission.
+
 ## Contact
 
 - Email: info@flowocity.ai

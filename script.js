@@ -57,60 +57,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Handling
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const form = this;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.textContent;
-
-    // Collect data
-    const formData = new FormData(form);
-    const simpleData = Object.fromEntries(formData);
-
-    // Basic validation
-    if (!simpleData.name || !simpleData.email || !simpleData.company || !simpleData.stage || !simpleData.message) {
-        alert('Please fill in all fields.');
-        return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(simpleData.email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-
-    // Ensure Netlify form name is present
-    if (!formData.get('form-name')) {
-        formData.append('form-name', form.getAttribute('name') || 'contact');
-    }
-
-    // UI feedback
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-
-    try {
-        const response = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        });
-
-        if (!response.ok) throw new Error('Network response was not ok');
-
-        alert('Thank you for your message! We\'ll get back to you soon.');
-        form.reset();
-    } catch (err) {
-        console.error('Form submission failed', err);
-        alert('Sorry, there was an error sending your message. Please email info@flowocity.ai.');
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalBtnText;
-    }
-});
+// Contact form is handled natively by Netlify Forms. No JS interception needed.
 
 // Add scroll effect to navbar
 window.addEventListener('scroll', () => {

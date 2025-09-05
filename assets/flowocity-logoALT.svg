@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="50" viewBox="0 0 240 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo mark - enso circle with diagonal elements -->
+  <g id="logo-mark">
+    <!-- Main circle path with gap at top-right -->
+    <path d="M 25 5
+             A 20 20 0 1 1 5 25
+             A 20 20 0 0 1 11 11"
+          stroke="#6BCFFF" 
+          stroke-width="4" 
+          stroke-linecap="round" 
+          fill="none"/>
+    
+    <!-- Diagonal stroke elements inside -->
+    <line x1="18" y1="18" x2="26" y2="10" 
+          stroke="#6BCFFF" 
+          stroke-width="4" 
+          stroke-linecap="round"/>
+    <line x1="22" y1="24" x2="30" y2="16" 
+          stroke="#6BCFFF" 
+          stroke-width="4" 
+          stroke-linecap="round"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="60" y="35" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+        font-weight="700" 
+        font-size="36" 
+        fill="#000000">flowocity</text>
+</svg>
