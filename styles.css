@@ -734,6 +734,11 @@ section { scroll-margin-top: 90px; }
     color: var(--sky-blue);
 }
 
+/* Minimal LinkedIn icon spacing */
+.member-link i.fa-linkedin {
+    margin-right: 6px;
+}
+
 /* Contact Section */
 .contact {
     padding: 80px 0;
