@@ -146,18 +146,16 @@ p, body {
 .brand-logo {
     height: 28px;
     width: auto;
-    aspect-ratio: 240 / 50; /* maintain original proportions */
     display: block;
-    object-fit: cover; /* crop inside the band */
+    object-fit: contain;
 }
 
 .hero .brand-logo {
     height: 42px;
     width: auto;
-    aspect-ratio: 240 / 50; /* maintain original proportions */
     margin: 0 auto 10px;
     display: block;
-    object-fit: cover; /* crop inside the band */
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -668,12 +666,17 @@ section { scroll-margin-top: 90px; }
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center 20%;  /* Slightly upward focus to keep heads in frame */
     display: block;
     margin: 0 auto;
+    border: 2px solid var(--light-slate);
+    transition: border-color 0.2s ease;
 }
 
-/* Slight upward focus to avoid cropping top of head */
-/* Default is centered crop; no per-person overrides needed now */
+/* Add subtle hover effect on photos */
+.team-member:hover .member-photo img {
+    border-color: var(--sky-blue);
+}
 
 .photo-placeholder {
     width: 120px;
