@@ -390,16 +390,17 @@ section { scroll-margin-top: 90px; }
 
 .stage-arrow .arrow-line {
     position: absolute;
-    top: 8px;
-    bottom: 8px;
-    right: 56px;
+    top: 4px;
+    bottom: 4px;
+    right: 64px;
     width: 2px;
-    background: linear-gradient(180deg, var(--primary-navy) 0%, var(--sky-blue) 100%);
+    background: var(--primary-navy);
+    opacity: 0.85;
 }
 
 .stage-arrow .arrow-head {
     position: absolute;
-    right: 50px;
+    right: 58px;
     top: -2px;
     width: 0;
     height: 0;
@@ -407,6 +408,18 @@ section { scroll-margin-top: 90px; }
     border-right: 8px solid transparent;
     border-bottom: 12px solid var(--primary-navy);
 }
+
+/* Tick marks aligned with FP&A midpoint and Foundational base */
+.stage-arrow .tick {
+    position: absolute;
+    right: 63px;
+    width: 14px;
+    height: 2px;
+    background: var(--primary-navy);
+}
+
+.stage-arrow .tick-mid { top: 50%; transform: translateY(-50%); }
+.stage-arrow .tick-bottom { bottom: 0; transform: translateY(0); }
 
 .stage-arrow .arrow-labels {
     position: absolute;
@@ -416,18 +429,15 @@ section { scroll-margin-top: 90px; }
     display: block;
 }
 
-.stage-arrow .arrow-labels .label-top,
 .stage-arrow .arrow-labels .label-mid,
 .stage-arrow .arrow-labels .label-bottom {
     position: absolute;
     right: 0;
     transform: translateY(-50%);
     color: var(--primary-navy);
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 16px;
 }
-
-.stage-arrow .arrow-labels .label-top { top: 0; transform: translateY(0); }
 .stage-arrow .arrow-labels .label-mid { top: 50%; }
 .stage-arrow .arrow-labels .label-bottom { bottom: 0; transform: translateY(0); }
 
