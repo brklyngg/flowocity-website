@@ -146,16 +146,18 @@ p, body {
 .brand-logo {
     height: 28px;
     width: auto;
+    aspect-ratio: 240 / 50;
     display: block;
-    object-fit: contain; /* no cropping when using ALT logo */
+    object-fit: cover; /* crop to match ALT visual area */
 }
 
 .hero .brand-logo {
     height: 42px;
     width: auto;
+    aspect-ratio: 240 / 50;
     margin: 0 auto 10px;
     display: block;
-    object-fit: contain; /* no cropping when using ALT logo */
+    object-fit: cover; /* crop to match ALT visual area */
 }
 
 .nav-menu {
