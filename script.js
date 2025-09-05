@@ -60,29 +60,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Contact Form Handling
 const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Simple validation
-    if (!data.name || !data.email || !data.company || !data.stage || !data.message) {
+
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+
+    // Collect data
+    const formData = new FormData(form);
+    const simpleData = Object.fromEntries(formData);
+
+    // Basic validation
+    if (!simpleData.name || !simpleData.email || !simpleData.company || !simpleData.stage || !simpleData.message) {
         alert('Please fill in all fields.');
         return;
     }
-    
-    // Email validation
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
+    if (!emailRegex.test(simpleData.email)) {
         alert('Please enter a valid email address.');
         return;
     }
-    
-    // Simulate form submission (replace with actual form handling)
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    this.reset();
+
+    // Ensure Netlify form name is present
+    if (!formData.get('form-name')) {
+        formData.append('form-name', form.getAttribute('name') || 'contact');
+    }
+
+    // UI feedback
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        });
+
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        alert('Thank you for your message! We\'ll get back to you soon.');
+        form.reset();
+    } catch (err) {
+        console.error('Form submission failed', err);
+        alert('Sorry, there was an error sending your message. Please email info@flowocity.ai.');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+    }
 });
 
 // Add scroll effect to navbar

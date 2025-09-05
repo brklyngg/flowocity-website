@@ -141,7 +141,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="assets/pat-leahyB.jpg" alt="Photo of Pat Leahy">
+                        <img src="assets/pat-leahy.jpg" alt="Photo of Pat Leahy">
                     </div>
                     <h3>Pat Leahy</h3>
                     <p class="member-title">Founder</p>
@@ -179,7 +179,11 @@
             <h2 class="section-title">Get in Touch</h2>
             <p class="contact-subtitle">Please fill out this form, or email us directly at <a href="mailto:info@flowocity.ai">info@flowocity.ai</a></p>
             
-            <form class="contact-form" id="contact-form">
+            <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <div style="display:none" aria-hidden="true">
+                    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                </div>
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Name" required>
                 </div>
