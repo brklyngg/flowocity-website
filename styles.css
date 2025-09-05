@@ -146,18 +146,18 @@ p, body {
 .brand-logo {
     height: 28px;
     width: auto;
-    aspect-ratio: 240 / 50; /* match original logo proportions */
+    aspect-ratio: 240 / 50; /* maintain original proportions */
     display: block;
-    object-fit: contain;
+    object-fit: cover; /* crop inside the band */
 }
 
 .hero .brand-logo {
     height: 42px;
     width: auto;
-    aspect-ratio: 240 / 50; /* match original logo proportions */
+    aspect-ratio: 240 / 50; /* maintain original proportions */
     margin: 0 auto 10px;
     display: block;
-    object-fit: contain;
+    object-fit: cover; /* crop inside the band */
 }
 
 .nav-menu {
