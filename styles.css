@@ -409,17 +409,7 @@ section { scroll-margin-top: 90px; }
     border-bottom: 12px solid var(--primary-navy);
 }
 
-/* Tick marks aligned with FP&A midpoint and Foundational base */
-.stage-arrow .tick {
-    position: absolute;
-    right: 63px;
-    width: 14px;
-    height: 2px;
-    background: var(--primary-navy);
-}
-
-.stage-arrow .tick-mid { top: 50%; transform: translateY(-50%); }
-.stage-arrow .tick-bottom { bottom: 0; transform: translateY(0); }
+/* Tick marks removed per design update */
 
 .stage-arrow .arrow-labels {
     position: absolute;
