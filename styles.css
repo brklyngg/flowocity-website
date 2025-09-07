@@ -863,6 +863,13 @@ section { scroll-margin-top: 90px; }
     .stage-arrow { display: block; }
 }
 
+/* Ensure full-width stack on mobile/tablet when arrow is hidden */
+@media (max-width: 1023px) {
+    .stack-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
