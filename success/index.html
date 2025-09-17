@@ -10,6 +10,14 @@
 
       gtag('config', 'G-C3QRDX2F0Z');
     </script>
+    <script>
+        // Track confirmed form submission as a GA4 recommended event
+        gtag('event', 'generate_lead', {
+            form_id: 'contact',
+            form_destination: '/success',
+            value: 1
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message sent – Flowocity</title>
