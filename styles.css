@@ -945,3 +945,103 @@ section { scroll-margin-top: 90px; }
         padding: 24px;
     }
 }
+
+/* =============================
+   Resource Hub (standalone page)
+   ============================= */
+.resource-page .navbar { position: sticky; }
+
+.hub-hero {
+	padding: 140px 0 40px;
+	background: linear-gradient(180deg, #f9fbfe 0%, #f3f7fb 100%);
+	border-bottom: 1px solid var(--light-slate);
+}
+
+.hub-title {
+	font-size: clamp(40px, 5vw, 64px);
+	line-height: 1.1;
+	font-weight: 700;
+	margin-bottom: 12px;
+	color: var(--primary-navy);
+}
+
+.hub-subtitle {
+	font-size: 20px;
+	line-height: 28px;
+	color: var(--primary-navy);
+	font-weight: 600;
+	margin-bottom: 14px;
+}
+
+.hub-intro {
+	max-width: 900px;
+	color: var(--steel-gray);
+	margin-top: 6px;
+}
+
+.hub-section { padding: 56px 0; background: white; }
+.hub-section + .hub-section { border-top: 1px solid var(--light-slate); }
+.hub-section-title { text-align: left; margin-bottom: 20px; }
+
+/* Responsive 3-column table style */
+.hub-table { 
+	display: grid; 
+	gap: 0; 
+	border: 1px solid var(--light-slate); 
+	border-radius: 8px; 
+	overflow: hidden; 
+	background: var(--off-white);
+}
+
+.hub-header-row, .hub-row { 
+	display: grid; 
+	grid-template-columns: 1.1fr 1fr 1.1fr; 
+	gap: 0; 
+}
+
+.hub-header {
+	background: white;
+	padding: 14px 16px;
+	font-weight: 600;
+	border-bottom: 1px solid var(--light-slate);
+}
+
+.hub-row:nth-child(odd) { background: white; }
+.hub-row:nth-child(even) { background: var(--off-white); }
+
+.hub-cell {
+	padding: 16px;
+	border-top: 1px solid var(--light-slate);
+	color: var(--primary-navy);
+}
+
+.hub-link { color: var(--primary-navy); text-decoration: none; font-weight: 600; }
+.hub-link:hover { color: var(--sky-blue); text-decoration: underline; }
+
+.hub-benefits { background: var(--off-white); }
+.hub-bullets { 
+	max-width: 900px; 
+	margin: 0; 
+	padding-left: 18px; 
+	color: var(--primary-navy);
+}
+.hub-bullets li { margin: 10px 0; }
+
+/* Stack layout on mobile */
+@media (max-width: 900px) {
+	.hub-header-row { display: none; }
+	.hub-table { border-radius: 6px; }
+	.hub-row { grid-template-columns: 1fr; }
+	.hub-cell { border-top: 1px solid var(--light-slate); }
+	.hub-cell[data-label]::before {
+		content: attr(data-label);
+		display: block;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 600;
+		color: var(--steel-gray);
+		text-transform: uppercase;
+		letter-spacing: .02em;
+		margin-bottom: 6px;
+	}
+}
