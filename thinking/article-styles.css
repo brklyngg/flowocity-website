@@ -417,6 +417,7 @@
     border: 1px solid var(--light-slate);
     border-radius: 8px;
     padding: 24px;
+    margin-bottom: 24px;
 }
 
 .share-card-header {
@@ -477,6 +478,31 @@
 .share-btn.twitter:hover {
     background: rgba(29, 161, 242, 0.08);
     border-color: #1DA1F2;
+}
+
+/* LinkedIn Follow Card */
+.linkedin-follow-card {
+    background: white;
+    border: 1px solid var(--light-slate);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.linkedin-follow-card-header {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--steel-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.linkedin-follow-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
 }
 
 /* Responsive adjustments */
