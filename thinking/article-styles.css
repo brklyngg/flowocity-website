@@ -500,9 +500,8 @@
 
 .linkedin-follow-card-body {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px;
+    flex-direction: column;
+    gap: 12px;
 }
 
 /* Responsive adjustments */
