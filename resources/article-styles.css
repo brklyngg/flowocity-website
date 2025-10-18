@@ -504,6 +504,26 @@
     gap: 12px;
 }
 
+/* LinkedIn Follow Widget Styling */
+.linkedin-follow-widget-wrapper {
+    /* Center the LinkedIn widget */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Target the LinkedIn widget iframe to match button style */
+.linkedin-follow-widget-wrapper iframe {
+    max-width: 100%;
+}
+
+/* Alternative: If we want to add custom wrapper styling */
+.linkedin-follow-widget-wrapper {
+    background: white;
+    border-radius: 6px;
+    padding: 4px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .article-container {
