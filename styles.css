@@ -953,7 +953,7 @@ section { scroll-margin-top: 90px; }
 
 .hub-hero {
     background: linear-gradient(180deg, #f9fbfe 0%, #f3f7fb 100%);
-    padding: 120px 0 80px;
+    padding: 80px 0 64px;
     text-align: center;
     margin-top: 72px;
 }
@@ -963,14 +963,14 @@ section { scroll-margin-top: 90px; }
     line-height: 56px;
     font-weight: 700;
     color: var(--primary-navy);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .hub-subtitle {
     font-size: 20px;
     line-height: 28px;
     color: var(--steel-gray);
-    margin-bottom: 16px;
+    margin-bottom: 0;
     font-weight: 500;
 }
 
@@ -979,11 +979,12 @@ section { scroll-margin-top: 90px; }
     line-height: 24px;
     color: var(--steel-gray);
     max-width: 900px;
-    margin: 0 auto;
+    margin: 24px auto 0;
+    text-align: left;
 }
 
 .hub-section {
-    padding: 60px 0;
+    padding: 64px 0;
     background: var(--off-white);
 }
 
@@ -996,7 +997,12 @@ section { scroll-margin-top: 90px; }
     line-height: 40px;
     font-weight: 600;
     color: var(--primary-navy);
+    margin-bottom: 16px;
+}
+
+.hub-section-subtitle {
     margin-bottom: 32px;
+    margin-top: 0;
 }
 
 /* Hub table styles */
