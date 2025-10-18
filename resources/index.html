@@ -22,7 +22,7 @@
 
         .hub-subtitle {
             text-align: left;
-            max-width: 800px;
+            max-width: none;
             margin: 0;
         }
 
@@ -53,8 +53,12 @@
         }
 
         /* Reduce bullet point indentation */
+        .hub-bullets {
+            padding-left: 0;
+        }
+
         .hub-bullets li {
-            padding-left: 24px;
+            padding-left: 32px;
         }
 
         .hub-bullets li::before {
@@ -112,7 +116,7 @@
     <section class="hub-section">
         <div class="container">
             <h2 class="section-title hub-section-title"><img src="https://www.flowocity.ai/assets/favicons/favicon-512.png" alt=""> Flowocity Insights</h2>
-            <p style="max-width: 800px; margin: 0 0 32px; color: var(--steel-gray);">Observations we couldn't stop thinking about — so we wrote them down.</p>
+            <p class="hub-subtitle" style="margin-bottom: 32px;">Observations we couldn't stop thinking about — so we wrote them down.</p>
 
             <div class="hub-table insights-table" role="table" aria-label="Flowocity Original Thinking">
                 <div class="hub-header-row" role="row">
