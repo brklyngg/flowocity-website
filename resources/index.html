@@ -10,6 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <style>
+        /* Left-align section headers */
+        .hub-hero {
+            text-align: left;
+        }
+
+        .hub-title {
+            text-align: left;
+        }
+
+        .hub-subtitle {
+            text-align: left;
+            max-width: 800px;
+            margin: 0;
+        }
+
+        .hub-section-title {
+            text-align: left;
+        }
+
+        .hub-section p {
+            text-align: left;
+            margin-left: 0;
+        }
+
+        /* Custom layout for Flowocity Insights table (2-column) */
+        .insights-table .hub-header-row {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .insights-table .hub-row {
+            grid-template-columns: 1fr 2fr;
+        }
+    </style>
+
     <!-- Favicons -->
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicons/favicon-48.png">
@@ -42,18 +77,17 @@
     <header class="hub-hero">
         <div class="container">
             <h1 class="hub-title">📚 Flowocity Resource Hub</h1>
-            <p class="hub-subtitle">Expert Insights on Fractional Finance, Accounting, and Startup Growth</p>
-            <p class="hub-intro">At Flowocity, we help high-potential SaaS and AI startups build their financial foundation from the ground up. To support founders and investors, we've curated some of the best thinking from respected sources on fractional executives and outsourced accounting — and added our perspective on how these ideas translate to the real world of VC-backed tech startups.</p>
+            <p class="hub-subtitle">Essential reading curated by the Flowocity partners. Relevant for founders and core team members.</p>
         </div>
     </header>
 
     <!-- Original Thinking from Flowocity -->
     <section class="hub-section">
         <div class="container">
-            <h2 class="section-title hub-section-title">💡 Flowocity Thinking</h2>
-            <p style="max-width: 800px; margin: 0 auto 32px; text-align: center; color: var(--steel-gray);">Original insights and frameworks from our team on building scalable finance operations for high-growth startups.</p>
+            <h2 class="section-title hub-section-title"><img src="https://www.flowocity.ai/assets/favicons/favicon-512.png" alt="" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;"> Flowocity Insights</h2>
+            <p style="max-width: 800px; margin: 0 0 32px; color: var(--steel-gray);">Observations we couldn't stop thinking about — so we wrote them down.</p>
 
-            <div class="hub-table" role="table" aria-label="Flowocity Original Thinking">
+            <div class="hub-table insights-table" role="table" aria-label="Flowocity Original Thinking">
                 <div class="hub-header-row" role="row">
                     <div class="hub-header" role="columnheader">Article</div>
                     <div class="hub-header" role="columnheader">Summary</div>
