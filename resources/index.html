@@ -43,6 +43,33 @@
         .insights-table .hub-row {
             grid-template-columns: 1fr 2fr;
         }
+
+        /* Icon sizing for section headers - match emoji size */
+        .hub-section-title img {
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* Reduce bullet point indentation */
+        .hub-bullets li {
+            padding-left: 24px;
+        }
+
+        .hub-bullets li::before {
+            left: 0;
+        }
+
+        /* Footer link color fix */
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 
     <!-- Favicons -->
@@ -84,7 +111,7 @@
     <!-- Original Thinking from Flowocity -->
     <section class="hub-section">
         <div class="container">
-            <h2 class="section-title hub-section-title"><img src="https://www.flowocity.ai/assets/favicons/favicon-512.png" alt="" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;"> Flowocity Insights</h2>
+            <h2 class="section-title hub-section-title"><img src="https://www.flowocity.ai/assets/favicons/favicon-512.png" alt=""> Flowocity Insights</h2>
             <p style="max-width: 800px; margin: 0 0 32px; color: var(--steel-gray);">Observations we couldn't stop thinking about — so we wrote them down.</p>
 
             <div class="hub-table insights-table" role="table" aria-label="Flowocity Original Thinking">
