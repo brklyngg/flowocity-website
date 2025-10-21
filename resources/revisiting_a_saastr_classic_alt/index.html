@@ -137,6 +137,38 @@
             margin: 0;
         }
 
+        /* Inline LinkedIn icon styling */
+        .author-linkedin-inline {
+            margin-left: 12px;
+            color: #0077b5;
+            text-decoration: none;
+            font-size: 18px;
+            vertical-align: middle;
+            transition: color 0.2s ease;
+        }
+
+        .author-linkedin-inline:hover {
+            color: #005885;
+        }
+
+        .author-linkedin-inline i {
+            background: #0077b5;
+            color: white;
+            padding: 4px;
+            border-radius: 2px;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .author-linkedin-inline:hover i {
+            background: #005885;
+        }
+
         /* Responsive adjustments for alternative table */
         @media (max-width: 768px) {
             .mistakes-table-alt th,
@@ -345,15 +377,11 @@
                 <div class="author-info">
                     <img src="/assets/pat-leahy.jpg?v=2" alt="Pat Leahy" class="author-photo">
                     <div class="author-details">
-                        <h3>Pat Leahy</h3>
+                        <h3>Pat Leahy <a href="https://www.linkedin.com/in/pdleahy/" target="_blank" rel="noopener noreferrer" class="author-linkedin-inline"><i class="fab fa-linkedin"></i></a></h3>
                         <p>Founder, Flowocity</p>
                     </div>
                 </div>
                 <p class="author-bio">Former CFO of Greenhouse Software, helping scale the company from $8M to $160M ARR. With 20+ years of finance leadership in tech, Pat founded Flowocity to help early-stage founders build scalable finance operations.</p>
-                <a href="https://www.linkedin.com/in/pdleahy/" target="_blank" rel="noopener noreferrer" class="author-linkedin">
-                    <i class="fab fa-linkedin"></i>
-                    Connect on LinkedIn
-                </a>
             </div>
 
             <!-- Share Card -->
