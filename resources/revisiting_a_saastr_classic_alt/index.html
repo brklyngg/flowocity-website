@@ -137,36 +137,21 @@
             margin: 0;
         }
 
-        /* Inline LinkedIn icon styling */
+        /* Inline LinkedIn icon styling - matches home page */
         .author-linkedin-inline {
             margin-left: 8px;
-            color: #333;
+            color: var(--primary-navy);
             text-decoration: none;
+            font-size: 14px;
             vertical-align: baseline;
-            transition: color 0.2s ease;
         }
 
         .author-linkedin-inline:hover {
-            color: #0077b5;
+            color: var(--sky-blue);
         }
 
-        .author-linkedin-inline i {
-            background: #333;
-            color: white;
-            padding: 2px;
-            border-radius: 2px;
-            font-size: 10px;
-            width: 14px;
-            height: 14px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.2s ease;
-            vertical-align: middle;
-        }
-
-        .author-linkedin-inline:hover i {
-            background: #0077b5;
+        .author-linkedin-inline i.fa-linkedin {
+            margin-right: 0;
         }
 
         /* Responsive adjustments for alternative table */
@@ -377,7 +362,7 @@
                 <div class="author-info">
                     <img src="/assets/pat-leahy.jpg?v=2" alt="Pat Leahy" class="author-photo">
                     <div class="author-details">
-                        <h3>Pat Leahy <a href="https://www.linkedin.com/in/pdleahy/" target="_blank" rel="noopener noreferrer" class="author-linkedin-inline"><i class="fab fa-linkedin"></i></a></h3>
+                        <h3>Pat Leahy <a href="https://www.linkedin.com/in/pdleahy/" target="_blank" rel="noopener noreferrer" class="author-linkedin-inline"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></h3>
                         <p>Founder, Flowocity</p>
                     </div>
                 </div>
