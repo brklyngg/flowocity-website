@@ -1051,7 +1051,7 @@ section { scroll-margin-top: 90px; }
 .hub-link {
     color: var(--sky-blue);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.2s ease;
 }
 
@@ -1111,20 +1111,109 @@ section { scroll-margin-top: 90px; }
     .hub-row {
         grid-template-columns: 1fr;
         gap: 0;
+        margin-bottom: 24px;
+        border-radius: 8px;
+        overflow: hidden;
     }
 
     .hub-cell {
-        padding: 16px;
+        padding: 20px;
+        display: block;
     }
 
     .hub-cell[data-label]::before {
         content: attr(data-label) ": ";
         font-weight: 600;
         color: var(--primary-navy);
+        display: block;
+        margin-bottom: 8px;
     }
 
     .hub-cell:first-child {
         background: var(--off-white);
         border-bottom: 1px solid var(--light-slate);
+        padding-bottom: 16px;
+    }
+
+    .hub-cell:not(:first-child) {
+        padding-top: 16px;
+    }
+
+    /* Bold article titles on mobile */
+    .hub-cell .hub-link {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        display: block;
+    }
+
+    /* Improve spacing for Flowocity's Take section */
+    .hub-cell:last-child {
+        padding-top: 20px;
+        border-top: 1px solid var(--light-slate);
+        margin-top: 8px;
+    }
+
+    /* Special handling for 2-column insights table on mobile */
+    .insights-table .hub-row {
+        grid-template-columns: 1fr;
+    }
+
+    .insights-table .hub-cell:first-child {
+        background: var(--off-white);
+        border-bottom: 1px solid var(--light-slate);
+    }
+
+    .insights-table .hub-cell:last-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 16px;
+    }
+
+    /* Ensure consistent section spacing on mobile */
+    .hub-section {
+        padding: 48px 0;
+    }
+
+    .hub-section-title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 12px;
+    }
+
+    .hub-section-subtitle {
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* Additional mobile refinements for smaller screens */
+@media (max-width: 480px) {
+    .hub-hero {
+        padding: 80px 0 48px;
+    }
+
+    .hub-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .hub-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .hub-section {
+        padding: 40px 0;
+    }
+
+    .hub-section-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .hub-cell {
+        padding: 16px !important;
     }
 }
