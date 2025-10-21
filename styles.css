@@ -1104,12 +1104,17 @@ section { scroll-margin-top: 90px; }
         line-height: 26px;
     }
 
+    .hub-table {
+        display: block !important;
+    }
+
     .hub-header-row {
         display: none;
     }
 
     .hub-row {
-        grid-template-columns: 1fr;
+        display: block !important;
+        grid-template-columns: none !important;
         gap: 0;
         margin-bottom: 24px;
         border-radius: 8px;
@@ -1117,8 +1122,10 @@ section { scroll-margin-top: 90px; }
     }
 
     .hub-cell {
+        display: block !important;
+        width: 100% !important;
         padding: 20px;
-        display: block;
+        grid-column: unset !important;
     }
 
     .hub-cell[data-label]::before {
@@ -1139,12 +1146,13 @@ section { scroll-margin-top: 90px; }
         padding-top: 16px;
     }
 
-    /* Bold article titles on mobile */
+    /* Bold article titles on mobile - blue to show they're clickable */
     .hub-cell .hub-link {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 18px;
         line-height: 26px;
         display: block;
+        color: var(--sky-blue);
     }
 
     /* Improve spacing for Flowocity's Take section */

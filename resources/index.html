@@ -100,33 +100,82 @@
                 margin-bottom: 40px;
             }
 
-            /* Better mobile typography for article titles */
+            /* Force full vertical stacking on mobile - override any grid layouts */
+            .hub-table {
+                display: block !important;
+                gap: 0 !important;
+            }
+
+            .hub-header-row {
+                display: none !important;
+            }
+
+            .hub-row {
+                display: block !important;
+                margin-bottom: 32px !important;
+                background: white !important;
+                border: 1px solid var(--light-slate) !important;
+                border-radius: 8px !important;
+                overflow: hidden !important;
+            }
+
+            .hub-cell {
+                display: block !important;
+                width: 100% !important;
+                padding: 20px !important;
+                grid-column: unset !important;
+            }
+
+            /* Article section styling */
+            .hub-cell:first-child {
+                background: var(--off-white) !important;
+                border-bottom: 1px solid var(--light-slate) !important;
+                font-weight: 600 !important;
+            }
+
+            /* Summary and other sections */
+            .hub-cell:not(:first-child) {
+                background: white !important;
+                border-top: none !important;
+            }
+
+            /* Make article titles blue and bold to show they're clickable */
             .hub-link {
                 font-weight: 700 !important;
                 font-size: 18px !important;
                 line-height: 26px !important;
-                color: var(--primary-navy) !important;
+                color: var(--sky-blue) !important;
+                text-decoration: none !important;
             }
 
-            /* Improve mobile spacing between table rows */
-            .hub-table {
-                gap: 2px;
+            .hub-link:hover {
+                color: var(--sky-blue-light) !important;
+                text-decoration: underline !important;
             }
 
-            .hub-row {
-                margin-bottom: 32px !important;
-                background: white;
-                border: 1px solid var(--light-slate);
-            }
-
-            /* Better mobile cell styling */
-            .hub-cell {
-                padding: 20px !important;
-            }
-
-            .hub-cell:first-child {
-                background: var(--off-white) !important;
+            /* Add labels for mobile clarity */
+            .hub-cell[data-label="Article"]::before {
+                content: "Article: ";
                 font-weight: 600;
+                color: var(--primary-navy);
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            .hub-cell[data-label="Summary"]::before {
+                content: "Summary: ";
+                font-weight: 600;
+                color: var(--primary-navy);
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            .hub-cell[data-label="Flowocity's Take"]::before {
+                content: "Flowocity's Take: ";
+                font-weight: 600;
+                color: var(--primary-navy);
+                display: block;
+                margin-bottom: 8px;
             }
 
             /* Consistent spacing for all sections */
