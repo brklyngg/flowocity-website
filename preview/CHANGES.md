@@ -1,7 +1,7 @@
-# Preview Page Changes: AI-SaaS Positioning
+# Preview Page Changes: AI SaaS Positioning
 
 ## Overview
-This preview page at `/preview` implements strategic copy refinements to position Flowocity as AI-SaaS finance specialists. The changes are subtle yet powerful, designed to resonate with AI founders who face unique financial challenges.
+This preview page at `/preview` implements strategic copy refinements to position Flowocity as AI SaaS finance specialists. The changes are subtle yet powerful, designed to resonate with AI founders who face unique financial challenges.
 
 ---
 
@@ -11,29 +11,29 @@ This preview page at `/preview` implements strategic copy refinements to positio
 **Location:** Hero section, lines 107-112
 
 **Changes:**
-- **Subtitle Changed:** "Scale Smarter with Flowocity as your Fractional Finance Team" → **"Your Fractional Finance Team for the AI-SaaS Era"**
+- **Subtitle Changed:** "Scale Smarter with Flowocity as your Fractional Finance Team" → **"Your Fractional Finance Team for the AI SaaS Era"**
 - **NEW Sub-headline Added:** "We translate volatile usage, compute costs, and spiky growth into a clear financial narrative for your board and investors."
 
-**Impact:** Immediately signals AI-SaaS expertise through specific terminology (volatile usage, compute costs, spiky growth).
+**Impact:** Immediately signals AI SaaS expertise through specific terminology (volatile usage, compute costs, spiky growth).
 
 ---
 
-### 2. FP&A Service Details (AI-SaaS Terminology)
+### 2. FP&A Service Details (AI SaaS Terminology)
 **Location:** Services section, FP&A card, lines 159-163
 
 **Changes:**
 - "Runway forecasting & scenario modeling" → **"Runway forecasting & consumption-based scenario modeling"**
 - "Budget planning and resource allocation" → **"Budget planning and cloud resource allocation (FinOps)"**
-- "KPI dashboards and performance tracking" → **"AI-SaaS KPI dashboards and performance tracking"**
+- "KPI dashboards and performance tracking" → **"AI SaaS KPI dashboards and performance tracking"**
 
-**Impact:** Seeds specialized vocabulary (consumption-based, FinOps, AI-SaaS) throughout service offerings.
+**Impact:** Seeds specialized vocabulary (consumption-based, FinOps, AI SaaS) throughout service offerings.
 
 ---
 
 ### 3. NEW Section: "Metrics for the AI Era, Mastered"
 **Location:** New section between Services and About, lines 195-244
 
-**Structure:** 5 capability cards showcasing AI-SaaS metric expertise:
+**Structure:** 5 capability cards showcasing AI SaaS metric expertise:
 
 1. **Hybrid Revenue Models (ARR/MRR)**
    - Separates committed ARR from consumption-based revenue
@@ -57,7 +57,7 @@ This preview page at `/preview` implements strategic copy refinements to positio
    - Benchmarks revenue + gross profit per employee
    - Contextualizes with cloud cost allocation data
 
-**Impact:** This is the "show, don't tell" moment - proves ready-to-deploy AI-SaaS financial playbook.
+**Impact:** This is the "show, don't tell" moment - proves ready-to-deploy AI SaaS financial playbook.
 
 ---
 
@@ -67,9 +67,9 @@ This preview page at `/preview` implements strategic copy refinements to positio
 **Changes:**
 - Added `<meta name="robots" content="noindex, nofollow">` to prevent search indexing
 - Updated canonical to `/preview/`
-- Enhanced title: "...for AI-SaaS Startups"
-- Updated description with AI-SaaS terminology (Q2T3, ex-compute margins, consumption revenue, FinOps)
-- Expanded JSON-LD schema with AI-SaaS keywords
+- Enhanced title: "...for AI SaaS Startups"
+- Updated description with AI SaaS terminology (Q2T3, ex-compute margins, consumption revenue, FinOps)
+- Expanded JSON-LD schema with AI SaaS keywords
 
 ---
 
@@ -118,9 +118,9 @@ Keywords that resonate with AI founders:
 ## Next Steps (Optional Enhancements)
 
 If this positioning resonates, consider:
-1. Adding specific AI-SaaS case studies or testimonials
-2. Creating a "Why AI-SaaS is Different" explainer section
-3. Building out a Resources page with AI-SaaS finance content
+1. Adding specific AI SaaS case studies or testimonials
+2. Creating a "Why AI SaaS is Different" explainer section
+3. Building out a Resources page with AI SaaS finance content
 4. Adding specific metrics examples/screenshots (if available)
 
 ---
@@ -129,8 +129,8 @@ If this positioning resonates, consider:
 
 | Aspect | Before | After |
 |--------|--------|-------|
-| **Target** | High-growth tech startups | AI-SaaS startups specifically |
-| **Expertise Signal** | Generic finance capabilities | Specialized AI-SaaS metrics (Q2T3, ex-compute GM, FinOps) |
+| **Target** | High-growth tech startups | AI SaaS startups specifically |
+| **Expertise Signal** | Generic finance capabilities | Specialized AI SaaS metrics (Q2T3, ex-compute GM, FinOps) |
 | **Pain Points Addressed** | Standard startup finance needs | Volatile growth, compute costs, consumption revenue |
 | **Credibility Proof** | Professional experience | Deep understanding of AI business models |
 
