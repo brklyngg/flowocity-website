@@ -27,6 +27,25 @@
     font-weight: 500;
 }
 
+/* CV Summary Text */
+.cv-summary {
+    max-width: 900px;
+    margin: 0 auto 32px;
+    padding: 32px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--light-slate);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.summary-text {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--steel-gray);
+    text-align: center;
+    margin: 0;
+}
+
 /* Team Summary Stats */
 .team-summary {
     display: grid;
@@ -155,10 +174,90 @@
     margin-right: 6px;
 }
 
+/* Professional Experience Summary */
+.cv-experience-summary {
+    padding: 80px 0;
+    background: white;
+}
+
+.experience-timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.experience-block {
+    background: var(--off-white);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 24px;
+    border: 1px solid var(--light-slate);
+    transition: all 0.3s ease;
+}
+
+.experience-block:last-child {
+    margin-bottom: 0;
+}
+
+.experience-block:hover {
+    border-color: var(--sky-blue);
+    box-shadow: 0 6px 16px rgba(77, 184, 255, 0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-header h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin: 0;
+}
+
+.experience-years {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--sky-blue);
+    font-weight: 600;
+}
+
+.experience-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-highlights li {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--steel-gray);
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.experience-highlights li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-highlights li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--sky-blue);
+    font-weight: 600;
+}
+
 /* Core Competencies */
 .cv-competencies {
     padding: 80px 0;
-    background: white;
+    background: var(--off-white);
 }
 
 .competencies-grid {
@@ -214,10 +313,66 @@
     margin: 0;
 }
 
-/* Experience Section */
+/* Company Experience Section */
 .cv-experience {
     padding: 80px 0;
+    background: white;
+}
+
+/* Company Logo Grid (for role-stratified view) */
+.companies-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+}
+
+.company-logo-item {
     background: var(--off-white);
+    border-radius: 6px;
+    padding: 24px;
+    border: 1px solid var(--light-slate);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    aspect-ratio: 1.6;
+}
+
+.company-logo-item:hover {
+    border-color: var(--sky-blue);
+    box-shadow: 0 4px 12px rgba(77, 184, 255, 0.1);
+    transform: translateY(-2px);
+    background: white;
+}
+
+.company-logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(50%) opacity(0.85);
+    transition: filter 0.3s ease;
+}
+
+.company-logo-item:hover img {
+    filter: grayscale(0%) opacity(1);
+}
+
+.company-logo-item.logo-text-fallback {
+    padding: 16px;
+}
+
+.company-logo-item .logo-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--steel-gray);
+    text-align: center;
+}
+
+.company-logo-item:hover .logo-text {
+    color: var(--primary-navy);
 }
 
 .experience-intro {
@@ -571,6 +726,15 @@
         line-height: 28px;
     }
 
+    .cv-summary {
+        padding: 24px;
+    }
+
+    .summary-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
     .team-summary {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -580,6 +744,30 @@
     .stat-number {
         font-size: 32px;
         line-height: 40px;
+    }
+
+    .experience-block {
+        padding: 24px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-header h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .companies-logo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 16px;
+    }
+
+    .company-logo-item {
+        padding: 16px;
+        min-height: 80px;
     }
 
     .team-profiles {
@@ -654,6 +842,15 @@
         line-height: 26px;
     }
 
+    .cv-summary {
+        padding: 20px;
+    }
+
+    .summary-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
     .team-summary {
         padding: 24px 16px;
     }
@@ -661,6 +858,40 @@
     .stat-number {
         font-size: 28px;
         line-height: 36px;
+    }
+
+    .experience-block {
+        padding: 20px;
+    }
+
+    .experience-header h3 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .experience-years {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .experience-highlights li {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .companies-logo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+    }
+
+    .company-logo-item {
+        padding: 12px;
+        min-height: 70px;
+    }
+
+    .company-logo-item .logo-text {
+        font-size: 13px;
+        line-height: 18px;
     }
 
     .profile-card {
