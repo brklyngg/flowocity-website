@@ -1,0 +1,594 @@
+/* Team CV Specific Styles */
+
+/* CV Hero Section */
+.cv-hero {
+    background: linear-gradient(135deg, #f9fbfe 0%, #f3f7fb 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    margin-top: 72px;
+}
+
+.cv-header {
+    margin-bottom: 48px;
+}
+
+.cv-title {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 16px;
+}
+
+.cv-subtitle {
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--steel-gray);
+    font-weight: 500;
+}
+
+/* Team Summary Stats */
+.team-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--light-slate);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.summary-stat {
+    text-align: center;
+    padding: 16px;
+}
+
+.stat-number {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    color: var(--sky-blue);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--steel-gray);
+    font-weight: 500;
+}
+
+/* Team Intro Section */
+.cv-team-intro {
+    padding: 80px 0;
+    background: var(--off-white);
+}
+
+.team-profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 36px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+    text-align: center;
+    border: 1px solid var(--light-slate);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-card:hover {
+    border-color: var(--sky-blue);
+    box-shadow: 0 6px 16px rgba(77, 184, 255, 0.12);
+    transform: translateY(-4px);
+}
+
+.profile-photo {
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 2px solid var(--light-slate);
+    transition: border-color 0.3s ease;
+}
+
+.profile-card:hover .profile-photo img {
+    border-color: var(--sky-blue);
+}
+
+.profile-card h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+}
+
+.profile-role {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--sky-blue);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.profile-summary {
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--steel-gray);
+    text-align: left;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.profile-linkedin {
+    color: var(--primary-navy);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+}
+
+.profile-linkedin:hover {
+    color: var(--sky-blue);
+    text-decoration: underline;
+}
+
+.profile-linkedin i {
+    margin-right: 6px;
+}
+
+/* Core Competencies */
+.cv-competencies {
+    padding: 80px 0;
+    background: white;
+}
+
+.competencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.competency-item {
+    padding: 28px;
+    background: var(--off-white);
+    border-radius: 8px;
+    border: 1px solid var(--light-slate);
+    transition: all 0.3s ease;
+}
+
+.competency-item:hover {
+    border-color: var(--sky-blue);
+    box-shadow: 0 6px 16px rgba(77, 184, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.competency-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--sky-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.competency-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.competency-item h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin-bottom: 12px;
+}
+
+.competency-item p {
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--steel-gray);
+    margin: 0;
+}
+
+/* Experience Section */
+.cv-experience {
+    padding: 80px 0;
+    background: var(--off-white);
+}
+
+.experience-intro {
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--steel-gray);
+    margin: -24px auto 56px;
+    font-style: italic;
+}
+
+.stage-section {
+    margin-bottom: 64px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stage-section:last-child {
+    margin-bottom: 0;
+}
+
+.stage-header {
+    margin-bottom: 32px;
+    text-align: left;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--sky-blue);
+}
+
+.stage-header h3 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+}
+
+.stage-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--steel-gray);
+    font-weight: 500;
+    margin: 0;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.companies-grid-wrap {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.company-logo-card {
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+    border: 1px solid var(--light-slate);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+}
+
+.company-logo-card:hover {
+    border-color: var(--sky-blue);
+    box-shadow: 0 6px 16px rgba(77, 184, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.company-logo {
+    width: 100%;
+    max-width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.company-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--primary-navy);
+    text-align: center;
+}
+
+.company-scale {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--steel-gray);
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+/* Small Company Cards */
+.company-logo-card-small {
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    border: 1px solid var(--light-slate);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.company-logo-card-small:hover {
+    border-color: var(--sky-blue);
+    box-shadow: 0 4px 12px rgba(77, 184, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.company-logo-small {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text-small {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--steel-gray);
+    text-align: center;
+}
+
+/* Achievements Section */
+.cv-achievements {
+    padding: 80px 0;
+    background: white;
+}
+
+.achievements-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    display: flex;
+    gap: 24px;
+    padding: 32px;
+    background: var(--off-white);
+    border-radius: 8px;
+    border: 1px solid var(--light-slate);
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: var(--growth-green);
+    box-shadow: 0 6px 16px rgba(98, 168, 150, 0.1);
+    transform: translateY(-4px);
+}
+
+.achievement-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: var(--growth-green);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+.achievement-content h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+}
+
+.achievement-content p {
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--steel-gray);
+    margin: 0;
+}
+
+/* CTA Section */
+.cv-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(77, 184, 255, 0.08) 0%, rgba(98, 168, 150, 0.08) 100%);
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    color: var(--primary-navy);
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--steel-gray);
+    margin-bottom: 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cv-hero {
+        padding: 100px 0 60px;
+    }
+
+    .cv-title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .cv-subtitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .team-summary {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .team-profiles {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .competencies-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .companies-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .companies-grid-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achievements-list {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .achievement-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cv-hero {
+        padding: 80px 0 48px;
+    }
+
+    .cv-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .cv-subtitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .team-summary {
+        padding: 24px 16px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .profile-card {
+        padding: 24px;
+    }
+
+    .competency-item {
+        padding: 20px;
+    }
+
+    .stage-header h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .company-logo-card {
+        padding: 24px;
+        min-height: 160px;
+    }
+
+    .companies-grid-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-card {
+        padding: 20px;
+    }
+
+    .achievement-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .achievement-icon i {
+        font-size: 24px;
+    }
+}
+
+/* Desktop Enhancements */
+@media (min-width: 1024px) {
+    .cv-title {
+        font-size: 64px;
+        line-height: 72px;
+    }
+
+    .cv-subtitle {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .stat-number {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
