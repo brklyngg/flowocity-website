@@ -284,37 +284,15 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-subtitle">Please fill out this form, or email us directly at <a href="mailto:info@flowocity.ai">info@flowocity.ai</a></p>
+            <h2 class="section-title">Book a free 30-min discovery call</h2>
+            <p class="cta-alternative">or just email us at <a href="mailto:info@flowocity.ai">info@flowocity.ai</a></p>
             
-            <form class="contact-form" id="contact-form" name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact">
-                <div style="display:none" aria-hidden="true">
-                    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="company" name="company" placeholder="Company" required>
-                </div>
-                <div class="form-group">
-                    <select id="stage" name="stage" required>
-                        <option value="">Stage</option>
-                        <option value="pre-revenue">Pre-revenue</option>
-                        <option value="under-1m">&lt;$1M</option>
-                        <option value="1m-10m">$1–$10M</option>
-                        <option value="over-10m">$10M+</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
+            <div class="calendly-container">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/d/cwgp-yrb-5pw/talk-finance-with-a-flowocity-partner?primary_color=2F3A4A&text_color=2F3A4A&background_color=ffffff" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
             
         </div>
     </section>
