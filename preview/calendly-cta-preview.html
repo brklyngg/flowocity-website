@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendly CTA Preview - Flowocity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #2F3A4A;
+            --sky-blue: #4DB8FF;
+            --sky-blue-light: #35C4FF;
+            --growth-green: #62A896;
+            --steel-gray: #7A8089;
+            --light-slate: #E8ECF1;
+            --off-white: #F7FAFD;
+        }
+
+        body {
+            font-family: 'Karla', system-ui, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--primary-navy);
+            background-color: var(--off-white);
+            padding: 40px 20px;
+        }
+
+        .preview-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-slate);
+        }
+
+        .preview-header h1 {
+            font-size: 32px;
+            color: var(--primary-navy);
+            margin-bottom: 8px;
+        }
+
+        .preview-header p {
+            font-size: 16px;
+            color: var(--steel-gray);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            line-height: 44px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--primary-navy);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact .section-title {
+            margin-bottom: 24px;
+        }
+
+        .cta-text {
+            text-align: center;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+        }
+
+        .cta-alternative {
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--steel-gray);
+            margin-bottom: 48px;
+        }
+
+        .cta-alternative a {
+            color: var(--sky-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cta-alternative a:hover {
+            text-decoration: underline;
+        }
+
+        .calendly-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .preview-notes {
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding: 24px;
+            background: var(--off-white);
+            border-left: 4px solid var(--sky-blue);
+            border-radius: 4px;
+        }
+
+        .preview-notes h3 {
+            font-size: 18px;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+        }
+
+        .preview-notes ul {
+            padding-left: 24px;
+            color: var(--steel-gray);
+        }
+
+        .preview-notes li {
+            margin-bottom: 8px;
+            line-height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .cta-text {
+                font-size: 20px;
+                line-height: 28px;
+            }
+
+            .contact {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-header">
+        <h1>📅 New Contact Section Preview</h1>
+        <p>Calendly CTA Replacement for Flowocity Website</p>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Book a free 30-min discovery call</h2>
+            <p class="cta-alternative">or just email us at <a href="mailto:info@flowocity.ai">info@flowocity.ai</a></p>
+            
+            <div class="calendly-container">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/d/cwgp-yrb-5pw/talk-finance-with-a-flowocity-partner?primary_color=2F3A4A&text_color=2F3A4A&background_color=ffffff" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </section>
+
+    <div class="preview-notes">
+        <h3>✨ What Changed:</h3>
+        <ul>
+            <li><strong>Removed:</strong> Contact form with multiple fields</li>
+            <li><strong>Added:</strong> Simple, elegant CTA with clear hierarchy</li>
+            <li><strong>Embedded:</strong> Calendly widget styled with your brand colors (#2F3A4A)</li>
+            <li><strong>Alternative:</strong> Email option for those who prefer direct contact</li>
+            <li><strong>Design:</strong> Clean, centered layout with subtle shadow on Calendly widget</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+

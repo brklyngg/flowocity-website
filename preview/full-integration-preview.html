@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowocity — Full Integration Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Highlight the new section */
+        .contact {
+            position: relative;
+        }
+        
+        .contact .section-title {
+            margin-bottom: 24px;
+        }
+        
+        .contact::before {
+            content: '✨ NEW SECTION';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #62A896;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .contact::before {
+                top: 10px;
+                right: 10px;
+                font-size: 10px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body id="top">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#top">
+                    <img src="../assets/flowocity-logoG.SVG" alt="Flowocity logo" class="brand-logo">
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="/resources/" class="nav-link">Resources</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Section (for context) -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Principals</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="../assets/pat-leahy.jpg?v=2" alt="Photo of Pat Leahy">
+                    </div>
+                    <h3>Pat Leahy</h3>
+                    <p class="member-title">Founder</p>
+                    <p class="member-bio">Former CFO of Greenhouse Software, helping scale the company from $8M to $160M ARR while securing $50M in venture funding and a $500M majority investment by TPG.</p>
+                    <p class="member-bio">With 20+ years of finance leadership in tech, Patrick has a passion for working with entrepreneurs and building from the ground up—leading him to found Flowocity alongside like-minded teammates from Greenhouse. He's also a proud father of two and a self-described "try"athlete (3x Ironman survivor).</p>
+                    <a href="https://www.linkedin.com/in/pdleahy/" target="_blank" rel="noopener noreferrer" class="member-link"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="../assets/gary-gurevich.jpeg?v=2" alt="Photo of Gary Gurevich">
+                    </div>
+                    <h3>Gary Gurevich</h3>
+                    <p class="member-title">Partner</p>
+                    <p class="member-bio">Finance leader operating at high-growth SaaS and CPG. Gary was Controller at Greenhouse Software through Series D, and built-out EBITDOG (the finance and legal function) at The Farmer's Dog.</p>
+                    <p class="member-bio">He focuses on building durable, user-centric finance systems that improve with each cycle. At Wyng, Gary continues as the day-to-day finance partner, now through Flowocity, drawing on the full team to cover the spectrum of needs.</p>
+                    <a href="https://www.linkedin.com/in/ggurevich/" target="_blank" rel="noopener noreferrer" class="member-link"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="../assets/jason-cohen.jpg?v=2" alt="Photo of Jason Cohen">
+                    </div>
+                    <h3>Jason Cohen</h3>
+                    <p class="member-title">Partner</p>
+                    <p class="member-bio">Jason is a seasoned finance operator, serving as the accounting and controller functions for high-growth startups and established brands.</p>
+                    <p class="member-bio">As founder of Organized Momentum, he has supported Greenhouse Software and other outstanding ventures, building finance operations that inspire long-term trust.</p>
+                    <a href="https://www.linkedin.com/in/jasoncohen4/" target="_blank" rel="noopener noreferrer" class="member-link"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✨ NEW Contact Section with Calendly -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Book a free 30-min discovery call</h2>
+            <p class="cta-alternative">or just email us at <a href="mailto:info@flowocity.ai">info@flowocity.ai</a></p>
+            
+            <div class="calendly-container">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/d/cwgp-yrb-5pw/talk-finance-with-a-flowocity-partner?primary_color=2F3A4A&text_color=2F3A4A&background_color=ffffff&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Flowocity. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+

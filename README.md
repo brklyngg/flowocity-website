@@ -56,4 +56,4 @@ The contact form is handled by Netlify Forms. Submissions are processed server-s
 
 ## License
 
-© 2024 Flowocity. All rights reserved.
+© 2025 Flowocity. All rights reserved.
