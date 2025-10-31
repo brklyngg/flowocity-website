@@ -54,6 +54,9 @@
     <!-- LinkedIn Platform Script -->
     <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
 
+    <!-- Calendly Badge Widget CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
     <!-- Favicons -->
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicons/favicon-48.png">
@@ -166,6 +169,7 @@
             border: 1px solid var(--light-slate);
             border-radius: 8px;
             padding: 24px;
+            margin-top: 24px;
             margin-bottom: 24px;
         }
 
@@ -184,6 +188,16 @@
             line-height: 20px;
             color: var(--steel-gray);
             margin: 0;
+        }
+
+        /* Footer email link styling */
+        .footer a {
+            color: white !important;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            color: var(--sky-blue) !important;
         }
 
         /* Responsive adjustments for alternative table */
@@ -426,7 +440,7 @@
             <!-- Calendly Badge Widget Card -->
             <div class="calendly-badge-card">
                 <div class="calendly-badge-card-header">Book a Call</div>
-                <p class="calendly-badge-description">Ready to discuss your finance needs? Schedule a free 30-minute discovery call with our team.</p>
+                <p class="calendly-badge-description">Schedule a free 30-minute discovery call</p>
             </div>
         </aside>
     </div>
@@ -442,9 +456,16 @@
     <script src="/script.js"></script>
 
     <!-- Calendly badge widget begin -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/d/cwgp-yrb-5pw/talk-finance-with-a-flowocity-partner?hide_gdpr_banner=1', text: 'Book a free 30-min call', color: '#2F3A4A', textColor: '#ffffff', branding: undefined }); }</script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        Calendly.initBadgeWidget({ 
+            url: 'https://calendly.com/d/cwgp-yrb-5pw/talk-finance-with-a-flowocity-partner?hide_gdpr_banner=1', 
+            text: 'Book a free 30-min call', 
+            color: '#2F3A4A', 
+            textColor: '#ffffff', 
+            branding: undefined 
+        });
+    </script>
     <!-- Calendly badge widget end -->
 </body>
 </html>
