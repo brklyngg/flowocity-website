@@ -183,31 +183,26 @@
             margin-bottom: 16px;
         }
 
-        .calendly-badge-description {
-            font-size: 14px;
-            line-height: 20px;
-            color: var(--steel-gray);
-            margin: 0 0 16px 0;
-        }
-
         .calendly-link-btn {
             display: block;
             width: 100%;
-            padding: 12px 16px;
+            padding: 14px 20px;
             background: var(--primary-navy);
             color: white;
             text-align: center;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 15px;
+            font-weight: 600;
             border-radius: 6px;
             transition: all 0.2s ease;
             cursor: pointer;
+            line-height: 20px;
         }
 
         .calendly-link-btn:hover {
             background: var(--sky-blue);
             transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(47, 58, 74, 0.2);
         }
 
         /* Footer email link styling */
@@ -459,9 +454,8 @@
 
             <!-- Calendly Link Widget Card -->
             <div class="calendly-badge-card">
-                <div class="calendly-badge-card-header">Book a Call</div>
-                <p class="calendly-badge-description">Schedule a free 30-minute discovery call</p>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cwgp-yrb-5pw/talk-finance-with-a-flowocity-partner?hide_gdpr_banner=1&primary_color=2F3A4A'});return false;" class="calendly-link-btn">Book a Call</a>
+                <div class="calendly-badge-card-header">Get Started</div>
+                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cwgp-yrb-5pw/talk-finance-with-a-flowocity-partner?hide_gdpr_banner=1&primary_color=2F3A4A'});return false;" class="calendly-link-btn">Book Free 30-Min Call</a>
             </div>
         </aside>
     </div>
