@@ -163,14 +163,23 @@
 
         /* Calendly Badge Card */
         .calendly-badge-card {
-            background: linear-gradient(135deg, rgba(77, 184, 255, 0.08) 0%, rgba(77, 184, 255, 0.03) 100%);
-            border: 2px solid var(--sky-blue);
+            background: white;
+            border: 3px solid var(--sky-blue);
             border-radius: 12px;
-            padding: 28px 24px;
+            padding: 32px 24px;
             margin-top: 24px;
             margin-bottom: 24px;
-            box-shadow: 0 4px 16px rgba(77, 184, 255, 0.15);
-            transition: all 0.3s ease;
+            box-shadow: 0 0 0 0 rgba(77, 184, 255, 0.4), 0 4px 16px rgba(77, 184, 255, 0.15);
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(77, 184, 255, 0.4), 0 4px 16px rgba(77, 184, 255, 0.15);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(77, 184, 255, 0), 0 6px 24px rgba(77, 184, 255, 0.3);
+            }
         }
 
         .calendly-badge-card:hover {
@@ -179,32 +188,32 @@
         }
 
         .calendly-badge-card-header {
-            font-size: 18px;
+            font-size: 19px;
             line-height: 26px;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--primary-navy);
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .calendly-link-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             width: 100%;
-            padding: 16px 24px;
+            padding: 18px 26px;
             background: var(--sky-blue);
             color: white;
             text-align: center;
             text-decoration: none;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 10px;
             transition: all 0.3s ease;
             cursor: pointer;
             line-height: 24px;
-            box-shadow: 0 4px 12px rgba(77, 184, 255, 0.3);
+            box-shadow: 0 4px 14px rgba(77, 184, 255, 0.4);
         }
 
         .calendly-link-btn:hover {
