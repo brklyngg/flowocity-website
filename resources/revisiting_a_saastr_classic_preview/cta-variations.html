@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Design Variations - Flowocity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #2F3A4A;
+            --sky-blue: #4DB8FF;
+            --sky-blue-light: #35C4FF;
+            --steel-gray: #7A8089;
+            --light-slate: #E8ECF1;
+            --off-white: #F7FAFD;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Karla', system-ui, sans-serif;
+            background: #f0f2f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--steel-gray);
+            margin-bottom: 48px;
+            font-size: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .variation-container {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .variation-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 8px;
+        }
+
+        .variation-description {
+            font-size: 14px;
+            color: var(--steel-gray);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .cta-preview {
+            background: var(--off-white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Current Design */
+        .cta-current {
+            background: linear-gradient(135deg, rgba(77, 184, 255, 0.08) 0%, rgba(77, 184, 255, 0.03) 100%);
+            border: 2px solid var(--sky-blue);
+            border-radius: 12px;
+            padding: 28px 24px;
+            box-shadow: 0 4px 16px rgba(77, 184, 255, 0.15);
+        }
+
+        .cta-current .header {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .cta-current .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--sky-blue);
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(77, 184, 255, 0.3);
+        }
+
+        /* Variation 1: Bold Border + Larger Size */
+        .cta-v1 {
+            background: white;
+            border: 4px solid var(--sky-blue);
+            border-radius: 16px;
+            padding: 36px 28px;
+            box-shadow: 0 8px 24px rgba(77, 184, 255, 0.2);
+        }
+
+        .cta-v1 .header {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cta-v1 .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 20px 28px;
+            background: var(--sky-blue);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(77, 184, 255, 0.35);
+        }
+
+        /* Variation 2: Animated Glow */
+        .cta-v2 {
+            background: white;
+            border: 3px solid var(--sky-blue);
+            border-radius: 12px;
+            padding: 32px 24px;
+            box-shadow: 0 0 0 0 rgba(77, 184, 255, 0.4);
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(77, 184, 255, 0.4), 0 4px 16px rgba(77, 184, 255, 0.15);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(77, 184, 255, 0), 0 6px 24px rgba(77, 184, 255, 0.3);
+            }
+        }
+
+        .cta-v2 .header {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .cta-v2 .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 26px;
+            background: var(--sky-blue);
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(77, 184, 255, 0.4);
+        }
+
+        /* Variation 3: Elevated Card with Strong Shadow */
+        .cta-v3 {
+            background: white;
+            border: 2px solid var(--sky-blue);
+            border-radius: 14px;
+            padding: 32px 26px;
+            box-shadow: 0 12px 32px rgba(77, 184, 255, 0.25), 0 4px 8px rgba(0,0,0,0.05);
+            transform: translateY(-4px);
+        }
+
+        .cta-v3 .header {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .cta-v3 .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 26px;
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--sky-blue-light) 100%);
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(77, 184, 255, 0.4);
+        }
+
+        /* Variation 4: Double Border + Scale */
+        .cta-v4 {
+            background: white;
+            border: 3px solid var(--sky-blue);
+            border-radius: 14px;
+            padding: 32px 24px;
+            box-shadow: 0 0 0 4px rgba(77, 184, 255, 0.15), 0 8px 24px rgba(77, 184, 255, 0.2);
+            position: relative;
+        }
+
+        .cta-v4 .header {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .cta-v4 .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 26px;
+            background: var(--sky-blue);
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(77, 184, 255, 0.35);
+        }
+
+        /* Variation 5: Accent Border Top */
+        .cta-v5 {
+            background: white;
+            border: 2px solid var(--light-slate);
+            border-top: 6px solid var(--sky-blue);
+            border-radius: 12px;
+            padding: 32px 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .cta-v5 .header {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .cta-v5 .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 18px 26px;
+            background: var(--sky-blue);
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(77, 184, 255, 0.35);
+        }
+
+        /* Variation 6: Gradient Background + Icon Emphasis */
+        .cta-v6 {
+            background: linear-gradient(135deg, rgba(77, 184, 255, 0.12) 0%, rgba(77, 184, 255, 0.04) 100%);
+            border: 3px solid var(--sky-blue);
+            border-radius: 14px;
+            padding: 32px 24px;
+            box-shadow: 0 6px 20px rgba(77, 184, 255, 0.2);
+        }
+
+        .cta-v6 .header {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .cta-v6 .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            padding: 18px 26px;
+            background: var(--sky-blue);
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 16px rgba(77, 184, 255, 0.4);
+        }
+
+        .cta-v6 .btn i {
+            font-size: 22px;
+        }
+
+        .btn i {
+            font-size: 18px;
+        }
+
+        .note {
+            text-align: center;
+            color: var(--steel-gray);
+            font-size: 14px;
+            margin-top: 40px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CTA Design Variations</h1>
+        <p class="subtitle">All variations use Flowocity brand colors but draw attention through different design techniques</p>
+
+        <div class="grid">
+            <!-- Current Design -->
+            <div class="variation-container">
+                <h3 class="variation-title">Current Design (Live)</h3>
+                <p class="variation-description">Baseline: Subtle gradient background, 2px border, moderate shadow</p>
+                <div class="cta-preview">
+                    <div class="cta-current">
+                        <div class="header">Meet With a Flowocity Partner</div>
+                        <a href="#" class="btn">
+                            <i class="far fa-calendar-check"></i>
+                            Book a Free 30-Minute Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variation 1 -->
+            <div class="variation-container">
+                <h3 class="variation-title">Bold & Large</h3>
+                <p class="variation-description">4px bold border, increased padding and font sizes for maximum presence</p>
+                <div class="cta-preview">
+                    <div class="cta-v1">
+                        <div class="header">Meet With a Flowocity Partner</div>
+                        <a href="#" class="btn">
+                            <i class="far fa-calendar-check"></i>
+                            Book a Free 30-Minute Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variation 2 -->
+            <div class="variation-container">
+                <h3 class="variation-title">Animated Glow Pulse</h3>
+                <p class="variation-description">Subtle pulsing glow effect that draws the eye without being aggressive</p>
+                <div class="cta-preview">
+                    <div class="cta-v2">
+                        <div class="header">Meet With a Flowocity Partner</div>
+                        <a href="#" class="btn">
+                            <i class="far fa-calendar-check"></i>
+                            Book a Free 30-Minute Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variation 3 -->
+            <div class="variation-container">
+                <h3 class="variation-title">Elevated Card</h3>
+                <p class="variation-description">Strong shadow and slight lift creates depth and draws attention</p>
+                <div class="cta-preview">
+                    <div class="cta-v3">
+                        <div class="header">Meet With a Flowocity Partner</div>
+                        <a href="#" class="btn">
+                            <i class="far fa-calendar-check"></i>
+                            Book a Free 30-Minute Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variation 4 -->
+            <div class="variation-container">
+                <h3 class="variation-title">Double Border</h3>
+                <p class="variation-description">3px solid border + 4px soft outer ring for added visual weight</p>
+                <div class="cta-preview">
+                    <div class="cta-v4">
+                        <div class="header">Meet With a Flowocity Partner</div>
+                        <a href="#" class="btn">
+                            <i class="far fa-calendar-check"></i>
+                            Book a Free 30-Minute Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variation 5 -->
+            <div class="variation-container">
+                <h3 class="variation-title">Accent Bar Top</h3>
+                <p class="variation-description">Thick colored top border creates a distinctive "important card" look</p>
+                <div class="cta-preview">
+                    <div class="cta-v5">
+                        <div class="header">Meet With a Flowocity Partner</div>
+                        <a href="#" class="btn">
+                            <i class="far fa-calendar-check"></i>
+                            Book a Free 30-Minute Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variation 6 -->
+            <div class="variation-container">
+                <h3 class="variation-title">Gradient + Large Icon</h3>
+                <p class="variation-description">Stronger gradient background with emphasized icon for visual interest</p>
+                <div class="cta-preview">
+                    <div class="cta-v6">
+                        <div class="header">Meet With a Flowocity Partner</div>
+                        <a href="#" class="btn">
+                            <i class="far fa-calendar-check"></i>
+                            Book a Free 30-Minute Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="note">All designs maintain Flowocity's brand identity while using contemporary techniques to increase visibility</p>
+    </div>
+</body>
+</html>
+
