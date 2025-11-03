@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Finance Stack Analyzer — Flowocity</title>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="analyzer-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="../assets/flowocity-logoG.SVG" alt="Flowocity logo" class="brand-logo">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="analyzer-main">
+        <div class="container">
+            <!-- Form Section -->
+            <section id="form-section" class="analyzer-section">
+                <div class="analyzer-header">
+                    <h1>Finance Stack Analyzer</h1>
+                    <p class="analyzer-subtitle">Get a tailored finance stack recommendation based on your business model and existing tools — grounded entirely in our research and source material.</p>
+                </div>
+
+                <form id="stack-analyzer-form" class="analyzer-form">
+                    <div class="form-group">
+                        <label for="businessModel">Business Model <span class="required">*</span></label>
+                        <textarea 
+                            id="businessModel" 
+                            name="businessModel" 
+                            required
+                            rows="3"
+                            placeholder="e.g., B2B SaaS with usage-based pricing, serving mid-market customers"></textarea>
+                        <small class="form-help">Describe your revenue model, customer type, and pricing structure</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="existingTools">Existing Tools</label>
+                        <input 
+                            type="text" 
+                            id="existingTools" 
+                            name="existingTools"
+                            placeholder="e.g., Stripe, Salesforce, QuickBooks">
+                        <small class="form-help">Comma-separated list of finance/sales tools you're already using</small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="revenueType">Revenue Type <span class="required">*</span></label>
+                            <select id="revenueType" name="revenueType" required>
+                                <option value="">Select...</option>
+                                <option value="subscription">Subscription Only</option>
+                                <option value="usage">Usage-Based Only</option>
+                                <option value="hybrid">Hybrid (Subscription + Usage)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stage">Company Stage <span class="required">*</span></label>
+                            <select id="stage" name="stage" required>
+                                <option value="">Select...</option>
+                                <option value="Pre-Seed">Pre-Seed</option>
+                                <option value="Seed">Seed</option>
+                                <option value="Series A">Series A</option>
+                                <option value="Series B+">Series B+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" id="analyze-btn">
+                        <span class="btn-text">Analyze Stack</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Analyzing...
+                        </span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="analyzer-section" style="display: none;">
+                <div class="results-header">
+                    <h2>Your Finance Stack Analysis</h2>
+                    <div class="results-actions">
+                        <button id="refresh-btn" class="btn btn-secondary">
+                            <i class="fas fa-sync-alt"></i> Refresh with Latest Sources
+                        </button>
+                        <button id="new-analysis-btn" class="btn btn-secondary">
+                            <i class="fas fa-plus"></i> New Analysis
+                        </button>
+                    </div>
+                </div>
+
+                <div id="results-content" class="results-content">
+                    <!-- Results will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section id="error-section" class="analyzer-section error-section" style="display: none;">
+                <div class="error-content">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Something went wrong</h3>
+                    <p id="error-message"></p>
+                    <button id="try-again-btn" class="btn btn-primary">Try Again</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Flowocity. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="analyzer-script.js"></script>
+</body>
+</html>
+

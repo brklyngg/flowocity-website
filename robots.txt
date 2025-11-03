@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /tech_stack_analysis_preview/
 
 Sitemap: https://www.flowocity.ai/sitemap.xml
