@@ -163,58 +163,72 @@
 
         /* Calendly Badge Card */
         .calendly-badge-card {
-            background: linear-gradient(135deg, rgba(77, 184, 255, 0.08) 0%, rgba(77, 184, 255, 0.03) 100%);
-            border: 2px solid var(--sky-blue);
-            border-radius: 12px;
-            padding: 28px 24px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F77F00 100%);
+            border: 3px solid #FF6B35;
+            border-radius: 16px;
+            padding: 32px 28px;
             margin-top: 24px;
             margin-bottom: 24px;
-            box-shadow: 0 4px 16px rgba(77, 184, 255, 0.15);
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
             transition: all 0.3s ease;
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes subtle-pulse {
+            0%, 100% {
+                box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
+            }
+            50% {
+                box-shadow: 0 8px 32px rgba(255, 107, 53, 0.5);
+            }
         }
 
         .calendly-badge-card:hover {
-            box-shadow: 0 8px 24px rgba(77, 184, 255, 0.25);
-            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(255, 107, 53, 0.5);
+            transform: translateY(-3px) scale(1.02);
+            animation: none;
         }
 
         .calendly-badge-card-header {
-            font-size: 18px;
-            line-height: 26px;
-            font-weight: 600;
-            color: var(--primary-navy);
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            color: white;
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .calendly-link-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             width: 100%;
-            padding: 16px 24px;
-            background: var(--sky-blue);
-            color: white;
+            padding: 18px 28px;
+            background: white;
+            color: #FF6B35;
             text-align: center;
             text-decoration: none;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 10px;
             transition: all 0.3s ease;
             cursor: pointer;
-            line-height: 24px;
-            box-shadow: 0 4px 12px rgba(77, 184, 255, 0.3);
+            line-height: 26px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            letter-spacing: 0.3px;
         }
 
         .calendly-link-btn:hover {
-            background: var(--sky-blue-light);
+            background: #FFF5F1;
+            color: #F77F00;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(77, 184, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
         .calendly-link-btn i {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         /* Footer email link styling */
