@@ -20,6 +20,52 @@ Flowocity installs a connected, automated finance stack:
 
 Everything is transparent, editable, and collaborative—clients own their data and can drill down to transactions and assumptions. The result: reliable clarity and speed with the feel of a home-grown team.
 
+## Current Development Focus
+
+### Team CV Page Redesign (November 2025)
+
+**Status**: Research complete, awaiting design mockups
+
+**Key Context:**
+Comprehensive competitive research was conducted on November 8, 2025 analyzing 8+ fractional finance firms and professional services team pages. The research is documented in `team_cv_research_and_feedback_11_8_25.md`.
+
+**Top 3 Strategic Insights:**
+1. **Collective Achievement Narrative Beats Individual Resumes**: Lead with shared Greenhouse scaling story ($8M → $160M ARR) before individual credentials. This is currently underutilized as a differentiator.
+2. **Quantified Proof Points Drive Conversion**: Prominently display specific metrics (client count, funding secured, years of experience) instead of generic capability statements.
+3. **Visual Hierarchy Must Match Value Proposition**: Pages positioning "team advantage" must visually prioritize collaborative elements over traditional chronological resumes.
+
+**Current Page Weaknesses:**
+- Greenhouse scaling story buried in Pat's bio instead of being hero statement
+- Visual hierarchy reads like "three separate consultants" vs. "integrated team"
+- No client testimonials or external validation
+- Missing "team vs. individual CFO" comparison messaging
+- Static presentation (no interactive elements or timeline)
+
+**Priority 1 Recommendations** (from research):
+1. Restructure around collective Greenhouse narrative as hero section
+2. Add 3-5 client testimonials and case studies
+3. Implement "Team vs. Individual CFO" comparison table
+4. Add interactive Greenhouse journey timeline (2013-2022)
+5. Strengthen startup/VC-specific positioning
+
+**Next Steps:**
+- Use Cursor to mock up several design iterations implementing research feedback
+- Test different approaches to timeline visualization
+- Create comparison table showing team model advantages
+- Develop dual audience messaging (founders vs. VCs)
+- Maintain existing brand aesthetic while adding interactive elements
+
+**Important Files:**
+- Research: `team_cv_research_and_feedback_11_8_25.md`
+- Current page: `/team_cv/index.html`
+- Agent config: `.claude/agents/b2b-landing-researcher.md`
+
+**Design Constraints:**
+- Must maintain existing Flowocity brand colors and typography
+- Keep responsive at 768px breakpoint
+- Use vanilla JavaScript (no frameworks) for any interactive elements
+- Page remains noindex until ready for production
+
 ## Development Workflow
 
 ### Local Development
