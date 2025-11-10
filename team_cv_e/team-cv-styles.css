@@ -66,6 +66,7 @@
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
 }
 
 .narrative-conclusion {
@@ -136,7 +137,7 @@
 }
 
 .section-intro {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     line-height: 1.6;
     color: var(--steel-gray);
@@ -589,6 +590,7 @@
     line-height: 1.6;
     color: var(--steel-gray);
     margin-bottom: 48px;
+    text-align: left;
 }
 
 /* Pain Points Grid (For Founders) */
@@ -733,7 +735,7 @@
     line-height: 1.7;
     color: var(--primary-navy);
     font-weight: 500;
-    text-align: center;
+    text-align: left;
 }
 
 /* ============================================
