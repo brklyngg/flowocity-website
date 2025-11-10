@@ -4,7 +4,6 @@
 .cv-hero {
     background: linear-gradient(135deg, #f9fbfe 0%, #f3f7fb 100%);
     padding: 140px 0 100px;
-    text-align: center;
     margin-top: 72px;
     position: relative;
     overflow: hidden;
@@ -26,6 +25,7 @@
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    text-align: left;
 }
 
 .hero-title {
@@ -34,6 +34,7 @@
     font-weight: 700;
     color: var(--primary-navy);
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -112,6 +113,10 @@
 .team-comparison {
     padding: 100px 0;
     background: white;
+}
+
+.team-comparison .container {
+    text-align: left;
 }
 
 .section-title {
@@ -253,6 +258,10 @@
     background: var(--off-white);
 }
 
+.greenhouse-timeline .container {
+    text-align: left;
+}
+
 .timeline-container {
     max-width: 900px;
     margin: 0 auto;
@@ -341,6 +350,10 @@
 .team-profiles-section {
     padding: 100px 0;
     background: white;
+}
+
+.team-profiles-section .container {
+    text-align: left;
 }
 
 .team-profiles-grid {
@@ -467,6 +480,10 @@
 .dual-audience {
     padding: 100px 0;
     background: var(--off-white);
+}
+
+.dual-audience .container {
+    text-align: left;
 }
 
 .audience-tabs {
@@ -671,6 +688,10 @@
     background: white;
 }
 
+.testimonials-section .container {
+    text-align: left;
+}
+
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -761,6 +782,10 @@
     background: var(--off-white);
 }
 
+.cv-experience-summary .container {
+    text-align: left;
+}
+
 .experience-timeline {
     max-width: 1100px;
     margin: 0 auto;
@@ -840,6 +865,10 @@
 .cv-experience {
     padding: 100px 0;
     background: white;
+}
+
+.cv-experience .container {
+    text-align: left;
 }
 
 .companies-logo-grid {
@@ -927,6 +956,10 @@
 .faq-section {
     padding: 100px 0;
     background: var(--off-white);
+}
+
+.faq-section .container {
+    text-align: left;
 }
 
 .faq-list {
